@@ -1,13 +1,17 @@
 // Baccalauréat
 
-/*
-1. Stockez la moyenne du candidat (un nombre) dans une constante.
-2. Écrivez un test qui affiche dans la console :
-   - "Le candidat est recalé" si la moyenne est inférieure à 10.
-   - "Le candidat est reçu" si la moyenne est entre 10 et 12.
-   - "Le candidat est reçu avec mention" si la moyenne est supérieure ou égale à 12.
+/* 
+- Stockez la moyenne (numérique) d'un candidtat dans une constante
+- Ecrivez un test qui affiche dans la console
+	* "Le candidat est recalé"" si la cote est inférieure à 10
+	* "Le candidat est reçu" si la cote est entre 10 et 12
+	* "Le candidat est reçu avec mention" si la cote est supérieur ou égale à 12
 */
-
-// Exemple : si la moyenne du candidat est de 11, le programme devrait afficher "Le candidat est reçu."
-
-// N'oubliez pas de tester votre programme avec différentes moyennes pour couvrir tous les cas de figure.
+const moyenne = 14;
+if (moyenne < 10) {
+    console.log(`Le candidat est recalé (${moyenne})`);
+} else if (10 <= moyenne && moyenne < 12) {
+    console.log(`Le candidat est reçu (${moyenne})`);
+} else {
+    console.log(`Le candidat est reçu avec mention (${moyenne})`);
+}

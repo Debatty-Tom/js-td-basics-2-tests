@@ -1,19 +1,40 @@
 // Jour suivant
 
-/*
-1. Stockez le jour actuel (nom du jour, type texte) dans une constante.
-2. Écrivez des tests pour stocker dans une variable le nom du jour suivant dans chaque cas de figure :
-   - Si le jour actuel est "lundi", alors le jour suivant est "mardi".
-   - Si le jour actuel est "mardi", alors le jour suivant est "mercredi".
-   - Si le jour actuel est "mercredi", alors le jour suivant est "jeudi".
-   - Si le jour actuel est "jeudi", alors le jour suivant est "vendredi".
-   - Si le jour actuel est "vendredi", alors le jour suivant est "samedi".
-   - Si le jour actuel est "samedi", alors le jour suivant est "dimanche".
-   - Si le jour actuel est "dimanche", alors le jour suivant est "lundi".
-   - Si le jour actuel ne correspond à aucun des jours de la semaine, affichez dans la console "Erreur : jour non reconnu!"
-3. Testez si la variable qui contient le nom du jour suivant n'est pas vide, et dans ce cas, affichez dans la console le message "Demain, nous serons …" suivi du nom du jour suivant.
+/* 
+- Stockez le jour actuel (nom du jour, type texte) dans une constante
+- Ecrivez des tests qui stockent dans une variable le nom du jour suivant dans chaque cas de figure 
+et, si le nom du jour qui se trouve dans la constante n'est pas un des 7 de jours de la semaine,
+affiche dasn la console "Erreur : jour non reconnu !"
+- Testez si la variable qui conntienyt le nom du jour n'ets pas vide et,
+dans ce cas, affichez dans la console le message "Demain, nous serons …"
 */
 
-// Exemple : si le jour actuel est "mardi", le programme devrait afficher "Demain, nous serons mercredi."
-
-// N'oubliez pas de tester votre programme avec divers jours de la semaine.
+const getDay = new Date().getDay();
+const dayNames = ["dimanche","lundi","mardi","mercredi","jeudi","vendredi","samedi"];
+const currentDay = dayNames[getDay];
+switch (currentDay) {
+    case "dimanche":
+        console.log("Demain nous seront lundi");
+        break;
+    case "lundi":
+        console.log("Demain nous seront mardi");
+        break;
+    case "mardi":
+        console.log("Demain nous seront mercredi");
+        break;
+    case "mercredi":
+        console.log("Demain nous seront jeudi");
+        break;
+    case "jeudi":
+        console.log("Demain nous seront vendredi");
+        break;
+    case "vendredi":
+        console.log("Demain nous seront samedi");
+        break;
+    case "samedi":
+        console.log("Demain nous seront dimanche");
+        break;
+    default:
+        console.log("Erreur : jour non reconnu !");
+        break;
+}
