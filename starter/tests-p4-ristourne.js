@@ -18,3 +18,13 @@ sur base de la situation de l’acheteur et du montant de ses achats.
 - achat de 126€ et moins de 3 enfants : 10 % = 12.6€
 - achat de 126€ et 3 enfants : 10 % = 12.6€
 */
+const nbEnfants = 3;
+const prix = 100;
+let reduc;
+if ((prix <= 125)||(nbEnfants >= 3)) {
+    reduc = prix/10;
+    console.log(`La réduction est de ${reduc}`)
+} else {
+    reduc = prix/20;
+    console.log(`La réduction est de ${reduc}`)
+}
