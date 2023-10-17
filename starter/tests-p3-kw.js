@@ -20,3 +20,24 @@ Valeurs de test :
 - 71 KW => 30 * 25 + 20 * 20 + 20 * 15 + 1 * 10 = 750 + 400 + 300 + 10 = 1460 centimes = 14.6 €
 - 80 KW => 30 * 25 + 20 * 20 + 20 * 15 + 10 * 10 = 750 + 400 + 300 + 100 = 1550 centimes = 15.5 €
 */
+
+const conso = prompt('entrez votre consommation')
+let prixElec;
+let prixTot
+if (conso <= 30) {
+    prixElec = 25;
+    prixTot = conso*prixElec;
+    console.log(`${prixTot/100} €`)
+} else if (conso >= 31 && conso <= 50) {
+    prixElec = 20;
+    prixTot = (30*25)+((conso-30)*prixElec);
+    console.log(`${prixTot/100} €`)
+} else if (conso >= 51 && conso <= 70) {
+    prixElec = 15;
+    prixTot = (30*25)+(20*20)+((conso-50)*prixElec);
+    console.log(`${prixTot/100} €`)
+} else {
+    prixElec = 10;
+    prixTot = (30*25)+(20*20)+(20*15)+((conso-70)*prixElec);
+    console.log(`${prixTot/100} €`)
+}
