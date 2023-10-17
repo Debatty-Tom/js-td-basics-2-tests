@@ -39,3 +39,4 @@ switch (currentDay) {
         console.log("Erreur : jour non reconnu !");
         break;
 }
+
