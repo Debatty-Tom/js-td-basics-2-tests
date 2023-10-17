@@ -14,6 +14,21 @@ AUTREMENT DIT :
 	3. Exception à l'exception : les années divisibles par 400 sont bissextiles
 */
 
+const currentYear = new Date().getFullYear();
+if (currentYear/4) {
+	if (currentYear/100) {
+	console.log(`${currentYear} est une année non bissextile`);
+		if (currentYear/400) {
+			console.log(`${currentYear} est une année bissextile`);
+		} else {
+			console.log(`${currentYear} est une année non bissextile`);
+		}
+	} else {
+	console.log(`${currentYear} est une année bissextile`);
+	}
+} else {
+	console.log(`${currentYear} est une année non bissextile`);
+}
 /*
 AIDES ( à regarder seulement si vous ne vous en sortez pas tout seul)
 Etapes :
