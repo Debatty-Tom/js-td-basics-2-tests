@@ -9,6 +9,7 @@ affiche dasn la console "Erreur : jour non reconnu !"
 dans ce cas, affichez dans la console le message "Demain, nous serons …"
 */
 
+
 const getDay = new Date().getDay();
 const dayNames = ["dimanche","lundi","mardi","mercredi","jeudi","vendredi","samedi"];
 const currentDay = dayNames[getDay];
